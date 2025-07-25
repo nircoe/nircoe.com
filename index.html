@@ -3,125 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nircoe.com</title>
+    <title>Nir Coe - Software & Game Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Playfair Display', serif;
-            background: #1a1a1a;
-            color: #e0e0e0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .container {
-            text-align: center;
-            max-width: 500px;
-            padding: 2rem;
-        }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            color: #ffffff;
-            letter-spacing: 3px;
-        }
-        
-        .status {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #888;
-            font-weight: 300;
-        }
-        
-        .description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 3rem;
-        }
-        
-        .progress-indicator {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 2rem;
-        }
-        
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #333;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-        
-        .dot:nth-child(1) { animation-delay: 0s; }
-        .dot:nth-child(2) { animation-delay: 0.2s; }
-        .dot:nth-child(3) { animation-delay: 0.4s; }
-        
-        @keyframes pulse {
-            0%, 80%, 100% {
-                background: #333;
-                transform: scale(1);
-            }
-            40% {
-                background: #666;
-                transform: scale(1.2);
-            }
-        }
-        
-        .footer {
-            font-size: 0.8rem;
-            color: #444;
-            margin-top: 3rem;
-        }
-        
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 2rem;
-                letter-spacing: 1px;
-            }
-            
-            .status {
-                font-size: 1rem;
-            }
-            
-            .container {
-                padding: 1rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Nir Coe - Software Developer at Mobileye, Game Developer, and Open Source Contributor. BSc Computer Science from Technion.">
 </head>
 <body>
-    <div class="container">
-        <h1 class="logo">nircoe</h1>
-        <p class="status">under construction</p>
-        <p class="description">
-            Website in development.
-        </p>
-        
-        <div class="progress-indicator">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+    <div class="scroll-indicator"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">nircoe</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        
-        <div class="footer">
-            &copy; 2025 nircoe
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Software & Game Developer</h1>
+                        <p class="subtitle">Building robust software and engaging games</p>
+                        <p class="description">
+                            C++ developer at Mobileye with expertise in game development and open source tools. 
+                            BSc Computer Science graduate from the Technion.
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="#projects" class="btn btn-primary">View Projects</a>
+                            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="tech-grid">
+                            <div class="tech-item">C++</div>
+                            <div class="tech-item">Game Dev</div>
+                            <div class="tech-item">Open Source</div>
+                            <div class="tech-item">Software Architecture</div>
+                            <div class="tech-item">Performance</div>
+                            <div class="tech-item">Tools</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <div class="about-info">
+                        <h3>Background</h3>
+                        <p><strong>Position:</strong> Software Developer at Mobileye (MBLY)</p>
+                        <p><strong>Education:</strong> BSc Computer Science, Technion</p>
+                        <p><strong>Primary Language:</strong> C++</p>
+                        <p><strong>Focus Areas:</strong> Software Development, Game Development, Open Source Tools</p>
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            I'm a software developer at Mobileye working primarily with C++, building systems that contribute to autonomous vehicle technology. 
+                            My background includes a Computer Science degree from the Technion, where I developed a strong foundation in software engineering principles.
+                        </p>
+                        <p>
+                            Beyond my professional work, I'm passionate about game development. I've published several games and continue to work on new projects. 
+                            This has led me to create open source tools that solve common challenges in game development workflows.
+                        </p>
+                        <p>
+                            My approach focuses on clean, efficient code and practical solutions. Whether working on enterprise software, 
+                            game mechanics, or development tools, I prioritize performance, maintainability, and user experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Professional Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Mobileye Development</h3>
+                            <span class="project-type">Professional</span>
+                        </div>
+                        <p class="project-description">
+                            Contributing to autonomous vehicle technology development at Mobileye, working with C++ on systems that process and analyze real-time sensor data for self-driving capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Real-time Systems</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Performance Optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="projects">
+            <div class="container">
+                <h2 class="section-title">Game Development</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Published Games</h3>
+                            <span class="project-type">Released</span>
+                        </div>
+                        <p class="project-description">
+                            Several games published across different platforms, focusing on engaging gameplay mechanics and polished user experiences. Each project involved full development cycle from concept to release.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Game Design</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Game Engines</span>
+                            <span class="tech-tag">Publishing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="mailto:games@nircoe.com" class="project-link">Contact for Details</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Upcoming Projects</h3>
+                            <span class="project-type">In Development</span>
+                        </div>
+                        <p class="project-description">
+                            Currently working on new game projects that explore different mechanics and genres. Focus on innovative gameplay while maintaining technical excellence.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Game Development</span>
+                            <span class="tech-tag">Prototyping</span>
+                            <span class="tech-tag">Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="projects">
+            <div class="container">
+                <h2 class="section-title">Open Source Tools</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">datacoe</h3>
+                            <span class="project-type">Open Source</span>
+                        </div>
+                        <p class="project-description">
+                            Data management tool designed specifically for game development workflows. Streamlines the process of organizing, versioning, and accessing game assets and configuration data.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Data Management</span>
+                            <span class="tech-tag">Game Tools</span>
+                            <span class="tech-tag">CLI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">soundcoe</h3>
+                            <span class="project-type">Open Source</span>
+                        </div>
+                        <p class="project-description">
+                            Sound management tool for game developers that simplifies audio asset organization, processing, and integration into game projects. Supports common audio formats and batch operations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Audio Processing</span>
+                            <span class="tech-tag">Game Tools</span>
+                            <span class="tech-tag">Cross-platform</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <p>
+                        Looking to discuss software development, game projects, or open source collaboration? 
+                        Let's connect.
+                    </p>
+                    <a href="mailto:nircoe@gmail.com" class="contact-email">nircoe@gmail.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 nircoe. Software & Game Developer.</p>
         </div>
-    </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
