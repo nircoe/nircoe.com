@@ -103,42 +103,7 @@ window.addEventListener('scroll', function() {
 
 // Add some interactive effects for better UX
 document.addEventListener('DOMContentLoaded', function() {
-    // Parallax effect for hero section
-    const hero = document.querySelector('.hero');
-    const techGrid = document.querySelector('.tech-grid');
     
-    if (hero && techGrid) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            techGrid.style.transform = `translateY(${rate}px)`;
-        });
-    }
-    
-    // Add typing effect to hero title (optional enhancement)
-    const heroTitle = document.querySelector('.hero h1');
-    if (heroTitle) {
-        const text = heroTitle.textContent;
-        heroTitle.textContent = '';
-        heroTitle.style.borderRight = '2px solid var(--accent)';
-        
-        let i = 0;
-        function typeWriter() {
-            if (i < text.length) {
-                heroTitle.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            } else {
-                // Remove cursor after typing is complete
-                setTimeout(() => {
-                    heroTitle.style.borderRight = 'none';
-                }, 1000);
-            }
-        }
-        
-        // Start typing effect after a short delay
-        setTimeout(typeWriter, 500);
-    }
 });
 
 // Performance optimization: throttle scroll events
