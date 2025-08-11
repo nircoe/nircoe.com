@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
@@ -73,7 +73,9 @@ nav {
 .nav-links a {
     color: var(--text-secondary);
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 1.05rem;
+    font-family: 'Inter', sans-serif;
     transition: color 0.3s ease;
     position: relative;
 }
@@ -155,32 +157,35 @@ nav {
 
 .hero-content-simple h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-size: 4.2rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
 .hero-content-simple .aka {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--text-tertiary);
     font-style: italic;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: -1.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .hero-content-simple .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: var(--text-primary);
+    font-weight: 600;
     margin-bottom: 2rem;
 }
 
 .hero-content-simple .description {
     color: var(--text-primary);
     margin-bottom: 2rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
 }
 
 .cta-buttons {
@@ -191,18 +196,23 @@ nav {
 
 .btn {
     padding: 0.8rem 2rem;
-    border: none;
     border-radius: 6px;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
     display: inline-block;
+    box-sizing: border-box;
 }
 
 .btn-primary {
     background: var(--accent);
     color: white;
+    border: none;
+    min-width: 140px;
+    text-align: center;
 }
 
 .btn-primary:hover {
@@ -215,6 +225,8 @@ nav {
     background: var(--bg-secondary);
     color: var(--text-primary);
     border: 1px solid var(--border);
+    min-width: 140px;
+    text-align: center;
 }
 
 .btn-secondary:hover {
@@ -231,12 +243,11 @@ section.projects {
 
 .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 600;
+    font-size: 3.2rem;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
     color: var(--text-primary);
-    font-weight: 700;
 }
 
 .contact .section-title {
@@ -283,11 +294,13 @@ section.projects {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .education-side .section-title,
 .experience-side .section-title {
-    font-size: 2rem;
+    font-size: 2.4rem;
+    font-weight: 700;
     margin-bottom: 2rem;
     margin-top: 1rem;
     text-align: center;
@@ -307,12 +320,12 @@ section.projects {
 
 .education-side .timeline-items-unified {
     justify-content: center;
-    margin-right: 2rem;
+    margin-right: 0;
 }
 
 .experience-side .timeline-items-unified {
     justify-content: center;
-    margin-left: 2rem;
+    margin-left: 0;
 }
 
 .timeline-item-main {
@@ -325,7 +338,8 @@ section.projects {
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
-    min-height: 240px;
+    min-height: 280px;
+    height: 280px;
     width: 210px;
     justify-content: space-between;
     position: relative;
@@ -424,8 +438,8 @@ section.projects {
 
 .projects-subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.4rem;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 2rem;
     color: var(--text-primary);
@@ -439,25 +453,47 @@ section.projects {
 
 .project-card.small {
     padding: 1.5rem;
-    min-height: 220px;
+    min-height: 260px;
+    height: 260px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card.small .project-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin-bottom: 0.8rem;
     font-family: 'Playfair Display', serif;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-primary);
 }
 
 .project-card.small .project-description {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     color: var(--text-secondary);
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 1rem;
     flex: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-tags span {
+    background: var(--accent);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    display: inline-block;
 }
 
 .project-card.small .project-type {
@@ -467,8 +503,11 @@ section.projects {
     border-radius: 12px;
     font-size: 0.75rem;
     font-weight: 500;
+    font-family: 'Inter', sans-serif;
     align-self: flex-start;
     margin-bottom: 0.8rem;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 
@@ -600,8 +639,8 @@ section.projects {
 
 .timeline-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--text-primary);
     margin: 0 0 0.5rem 0;
     white-space: nowrap;
@@ -609,18 +648,20 @@ section.projects {
 
 .timeline-company {
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin: 0 0 0.5rem 0;
-    font-weight: 400;
+    font-weight: 500;
     font-style: italic;
+    font-family: 'Inter', sans-serif;
 }
 
 .timeline-date {
     color: var(--text-tertiary);
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 0;
     white-space: nowrap;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
 
 
@@ -733,6 +774,7 @@ section.projects {
     transition: all 0.3s ease;
     font-weight: 500;
     font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .link-item-small:hover {
@@ -764,8 +806,10 @@ section.projects {
 }
 
 .contact-content p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 0.2rem;
 }
 
@@ -785,8 +829,10 @@ section.projects {
 }
 
 .contact-content .email-label {
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     color: var(--text-tertiary);
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     margin-top: 0.2rem;
     font-style: italic;
     margin-bottom: 0;
@@ -794,8 +840,10 @@ section.projects {
 
 .contact-email {
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--accent);
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
     padding: 0.8rem 1.5rem;
     border: 1px solid var(--border);
@@ -816,6 +864,7 @@ footer {
     padding: 2rem 0;
     text-align: center;
     color: var(--text-tertiary);
+    font-family: 'Inter', sans-serif;
 }
 
 footer .attribution {
@@ -897,6 +946,23 @@ footer .attribution a:hover {
         display: none;
     }
     
+    .education-side,
+    .experience-side {
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .education-side .timeline-items-unified,
+    .experience-side .timeline-items-unified {
+        justify-content: center !important;
+        align-items: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+    
     /* Projects Responsive */
     .projects-row {
         grid-template-columns: 1fr;
@@ -911,6 +977,10 @@ footer .attribution a:hover {
         flex-direction: column;
         gap: 1.5rem;
         align-items: center;
+        justify-content: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100%;
     }
 
     .timeline-item-exchange {
@@ -944,7 +1014,7 @@ footer .attribution a:hover {
     }
 
     .hero-content-simple h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .about-content {
@@ -977,6 +1047,25 @@ footer .attribution a:hover {
         padding: 0.6rem 1rem;
         font-size: 0.85rem;
     }
+    
+    /* Ensure project bubbles maintain styling on mobile */
+    .project-tags span {
+        background: var(--accent) !important;
+        color: white !important;
+        padding: 4px 8px !important;
+        border-radius: 12px !important;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        font-family: 'Inter', sans-serif !important;
+        display: inline-block !important;
+    }
+    
+    /* Fix education arrows on mobile */
+    .timeline-arrows-education {
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+        justify-content: center !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -985,7 +1074,45 @@ footer .attribution a:hover {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    
+    /* Force mobile styling for timeline */
+    .education-side,
+    .experience-side {
+        align-items: center !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .education-side .timeline-items-unified,
+    .experience-side .timeline-items-unified {
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        width: 100% !important;
+    }
+    
+    /* Force project bubble styling */
+    .project-tags span {
+        background: var(--accent) !important;
+        color: white !important;
+        padding: 4px 8px !important;
+        border-radius: 12px !important;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        font-family: 'Inter', sans-serif !important;
+        display: inline-block !important;
+    }
+    
+    /* Fix education arrows on mobile */
+    .timeline-arrows-education {
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+        justify-content: center !important;
     }
 
 }
