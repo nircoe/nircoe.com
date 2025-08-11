@@ -8,6 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/android-chrome-512x512.png">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
     <meta name="description" content="nircoe">
 </head>
 <body>
@@ -54,10 +61,11 @@
                 <div class="hero-content">
                     <div class="hero-content-simple">
                         <h1>Nir Cohen</h1>
-                        <p class="aka">(AKA nircoe)</p>
+                        <p class="aka">(nircoe)</p>
                         <p class="subtitle">Software Developer</p>
                         <p class="description">
-                            27 years old software developer working mostly with C/C++ and Python<br>
+                            27 years old<br>
+                            C/C++, C# and Python<br>
                             gamedev hobbyist, making games and gamedev tools<br>
                             BSc Computer Science graduate
                         </p>
@@ -148,31 +156,51 @@
                                 <a href="https://nircoe.itch.io/worm" target="_blank" rel="noopener noreferrer" class="project-card small">
                                     <h4 class="project-title">Worm</h4>
                                     <p class="project-description">Classic Snake-like game with modern mechanics with 4 difficulty levels</p>
-                                    <span class="project-type">Retro</span>
+                                    <div class="project-tags">
+                                        <span>Retro</span>
+                                        <span>raylib</span>
+                                        <span>C++</span>
+                                    </div>
                                 </a>
                                 
                                 <a href="https://nircoe.itch.io/titan-weight" target="_blank" rel="noopener noreferrer" class="project-card small">
                                     <h4 class="project-title">Titan Weight</h4>
-                                    <p class="project-description">Mythological tale platformer about scaling and burden</p>
-                                    <span class="project-type">Platformer</span>
+                                    <p class="project-description">Mythological tale platformer about scale (GMTK Game Jam 2024)</p>
+                                    <div class="project-tags">
+                                        <span>Platformer</span>
+                                        <span>Unity</span>
+                                        <span>C#</span>
+                                    </div>
                                 </a>
                                 
                                 <a href="https://nircoe.itch.io/village-defense" target="_blank" rel="noopener noreferrer" class="project-card small">
                                     <h4 class="project-title">Village Defense</h4>
                                     <p class="project-description">VR game with mesh cutting algorithm, protecting a medieval Japanese village</p>
-                                    <span class="project-type">VR/Web</span>
+                                    <div class="project-tags">
+                                        <span>VR/Web</span>
+                                        <span>Unity</span>
+                                        <span>C#</span>
+                                    </div>
                                 </a>
                                 
                                 <a href="https://nircoe.itch.io/self-defense" target="_blank" rel="noopener noreferrer" class="project-card small">
                                     <h4 class="project-title">Self Defense</h4>
                                     <p class="project-description">First person shooter mixed with tower defense</p>
-                                    <span class="project-type">Strategy/FPS</span>
+                                    <div class="project-tags">
+                                        <span>Strategy/FPS</span>
+                                        <span>Unity</span>
+                                        <span>C#</span>
+                                    </div>
                                 </a>
                                 
                                 <div class="project-card small">
                                     <h4 class="project-title">Galactic Farm Raiders</h4>
                                     <p class="project-description">Mobile casual game currently in development</p>
-                                    <span class="project-type">Mobile Casual</span>
+                                    <div class="project-tags">
+                                        <span>Mobile Casual</span>
+                                        <span>Unity</span>
+                                        <span>C#</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -183,31 +211,45 @@
                                 <a href="https://github.com/nircoe/soundcoe" target="_blank" rel="noopener noreferrer" class="project-card small">
                                     <h4 class="project-title">soundcoe</h4>
                                     <p class="project-description">Modern C++ audio library with OpenAL backend for game developers</p>
-                                    <span class="project-type">C++ Audio</span>
+                                    <div class="project-tags">
+                                        <span>Sound Management</span>
+                                        <span>C++</span>
+                                    </div>
                                 </a>
                                 
                                 <a href="https://github.com/nircoe/datacoe" target="_blank" rel="noopener noreferrer" class="project-card small">
                                     <h4 class="project-title">datacoe</h4>
                                     <p class="project-description">Simple C++ data management library template for game development</p>
-                                    <span class="project-type">C++ Data</span>
+                                    <div class="project-tags">
+                                        <span>Data Management</span>
+                                        <span>C++</span>
+                                    </div>
                                 </a>
                                 
                                 <a href="https://github.com/nircoe/logcoe" target="_blank" rel="noopener noreferrer" class="project-card small">
                                     <h4 class="project-title">logcoe</h4>
                                     <p class="project-description">Thread-safe C++ logging library with customizable output destinations</p>
-                                    <span class="project-type">C++ Logging</span>
+                                    <div class="project-tags">
+                                        <span>Logger</span>
+                                        <span>C++</span>
+                                    </div>
                                 </a>
                                 
                                 <a href="https://github.com/nircoe/testcoe" target="_blank" rel="noopener noreferrer" class="project-card small">
                                     <h4 class="project-title">testcoe</h4>
                                     <p class="project-description">Google Test wrapper for better visual test progress and crash handling</p>
-                                    <span class="project-type">C++ Testing</span>
+                                    <div class="project-tags">
+                                        <span>Test Reporter</span>
+                                        <span>C++</span>
+                                    </div>
                                 </a>
                                 
                                 <div class="project-card small">
                                     <h4 class="project-title">gamecoe</h4>
                                     <p class="project-description">Future comprehensive game development framework</p>
-                                    <span class="project-type">Coming Soon</span>
+                                    <div class="project-tags">
+                                        <span>Coming Soon</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
