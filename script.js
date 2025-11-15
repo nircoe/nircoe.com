@@ -101,9 +101,28 @@ window.addEventListener('scroll', function() {
     });
 });
 
+// Calculate and display age
+function calculateAge() {
+    const birthDate = new Date('1997-09-25');
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    // Adjust if birthday hasn't occurred this year yet
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+
 // Add some interactive effects for better UX
 document.addEventListener('DOMContentLoaded', function() {
-    
+    // Set age dynamically
+    const ageElement = document.getElementById('age');
+    if (ageElement) {
+        ageElement.textContent = calculateAge();
+    }
 });
 
 // Performance optimization: throttle scroll events
