@@ -271,7 +271,7 @@ section.projects {
 
 .timeline-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
     align-items: center;
     position: relative;
@@ -280,12 +280,13 @@ section.projects {
 .timeline-row::before {
     content: '';
     position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
+    grid-column: 1;
+    grid-row: 2;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    height: 1px;
     background: var(--border);
-    transform: translateX(-50%);
     z-index: 1;
 }
 
@@ -316,6 +317,12 @@ section.projects {
     width: 100%;
     max-width: 100%;
     overflow: visible;
+}
+
+@media (min-width: 769px) and (max-width: 860px) {
+    .timeline-items-unified {
+        gap: 0.5rem;
+    }
 }
 
 .education-side .timeline-items-unified {
@@ -648,7 +655,7 @@ section.projects {
 
 .timeline-company {
     color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     margin: 0 0 0.5rem 0;
     font-weight: 500;
     font-style: italic;
