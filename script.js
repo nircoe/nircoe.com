@@ -1,10 +1,18 @@
+// Section the user last clicked in the nav, kept highlighted until they scroll themselves
+let clickedId = '';
+['wheel', 'touchmove', 'keydown'].forEach(type => {
+    window.addEventListener(type, () => { clickedId = ''; }, { passive: true });
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 80;
+            clickedId = target.id;
+            window.dispatchEvent(new Event('scroll'));
+            const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -81,17 +89,27 @@ document.querySelectorAll('section, .project-card').forEach(el => {
 
 // Active navigation highlighting
 window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll('section[id], .experience-side[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
     
+    // A section is active once it reaches the middle of the screen
+    const middleOfScreen = pageYOffset + window.innerHeight / 2;
+
     let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        const sectionTop = section.getBoundingClientRect().top + pageYOffset;
+        if (middleOfScreen >= sectionTop) {
             current = section.getAttribute('id');
         }
     });
+
+    if (pageYOffset + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        current = sections[sections.length - 1].getAttribute('id');
+    }
+
+    if (clickedId) {
+        current = clickedId;
+    }
 
     navLinks.forEach(link => {
         link.classList.remove('active');
